@@ -3,7 +3,7 @@
 import React from "react";
 import { useAuth } from "react-oidc-context";
 
-export const CognitoLogin = (): React.ReactElement => {
+export const CognitoLogin = (props: any): React.ReactElement => {
   const auth = useAuth();
   const signOutRedirect = () => {
     const clientId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
