@@ -10,17 +10,7 @@ const cognitoAuthConfig = {
   scope: process.env.NEXT_PUBLIC_RESPONSE_SCOPE,
 };
 
-// // wrap the application with AuthProvider
-// root.render(
-//   <React.StrictMode>
-//     <AuthProvider {...cognitoAuthConfig}>
-//       <App />
-//     </AuthProvider>
-//   </React.StrictMode>
-// );
-
 export const CognitoWrapper = ({ children }: { children: React.ReactNode }): React.ReactNode => {
-  console.log('cognito wrapper rendering');
   return (
     <AuthProvider {...cognitoAuthConfig}>
       {children}

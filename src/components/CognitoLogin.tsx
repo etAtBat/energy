@@ -3,15 +3,8 @@
 import React from "react";
 import { useAuth } from "react-oidc-context";
 
-export const CognitoLogin = ({ children }: { children: React.ReactNode }): React.ReactElement => {
-  console.log('cognito login rendering')
+export const CognitoLogin = (): React.ReactElement => {
   const auth = useAuth();
-  console.log("auth?.user")
-  console.log(auth?.user);
-  console.log("children");
-  console.log(children);
-  console.log("process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID");
-  console.log(process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID);
   const signOutRedirect = () => {
     const clientId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
     const logoutUri = process.env.NEXT_PUBLIC_COGNITO_LOGOUT_URI as string;
