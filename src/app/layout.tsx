@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CognitoWrapper } from "@/components/CognitoProvider";
 import { CognitoLogin } from "@/components/CognitoLogin";
+import { EnergyCSVForm } from '@/components/EnergyCSVForm';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,6 +32,9 @@ export default function RootLayout({
           <CognitoLogin>
             {children}
           </CognitoLogin>
+          <section>
+            <EnergyCSVForm />
+          </section>
         </body>
       </CognitoWrapper>
     </html>
