@@ -10,10 +10,12 @@ export const CognitoLogin = ({ children }: { children: React.ReactNode }): React
   console.log(auth?.user);
   console.log("children");
   console.log(children);
+  console.log("process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID");
+  console.log(process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID);
   const signOutRedirect = () => {
-    const clientId = "35r3gb789ct53llv9lualbt1rm";
-    const logoutUri = "http://localhost:3000";
-    const cognitoDomain = "https://us-west-23ej1wts6v.auth.us-west-2.amazoncognito.com";
+    const clientId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
+    const logoutUri = process.env.NEXT_PUBLIC_COGNITO_LOGOUT_URI as string;
+    const cognitoDomain = process.env.NEXT_PUBLIC_COGNITO_DOMAIN;
     window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
   };
 
