@@ -28,6 +28,8 @@ const uploadTos3 = async (CSVInput: any) => {
     console.error(error);
     // handle the error that happened when we tried to put .csv to s3
   }
+
+  alert("Upload successful");
 };
 
 export const EnergyCSVForm = () => {
