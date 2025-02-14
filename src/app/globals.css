@@ -22,6 +22,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
 }
 
 * {
@@ -44,8 +45,9 @@ a {
 #csv-form {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   max-width: 320px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 #csv-form button {
