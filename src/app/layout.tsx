@@ -29,12 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <CognitoWrapper>
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          <CognitoLogin>
-            {children}
-          </CognitoLogin>
+          <CognitoLogin />
           <section>
             <EnergyCSVForm />
           </section>
+          {children}
         </body>
       </CognitoWrapper>
     </html>
