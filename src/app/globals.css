@@ -61,18 +61,22 @@ a {
   width: 88px;
 }
 
-form#manual-energy-form {
+form#manual-energy-form,
+form#manual-threshold-form {
   max-width: 320px;
 }
 
-form#manual-energy-form > * {
+form#manual-energy-form > *,
+form#manual-threshold-form > * {
   margin-top: 16px;
 }
 
-#manual-energy-form label {
+#manual-energy-form label,
+#manual-threshold-form label {
   margin-right: 6px;
 }
 
-#manual-energy-form button {
+#manual-energy-form button,
+#manual-threshold-form button {
   width: 88px;
 }
