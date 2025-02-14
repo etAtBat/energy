@@ -1,7 +1,7 @@
 "use client"
 import React, { FormEvent, useState } from "react";
 
-export const ManualInput = () => {
+export const EnergyManualInput = () => {
   const [datepickerValue, updateDatepickerValue] = useState('');
   const [usageValue, updateUsageValue] = useState('');
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
