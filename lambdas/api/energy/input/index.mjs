@@ -9,6 +9,8 @@ export const handler = async (event) => {
 
   // update record at UserId / date with new usage value
 
+  // maybe invoke SNS from here?
+
  const response = {
     statusCode: 200,
     body: JSON.stringify('Energy data saved successfully'),
