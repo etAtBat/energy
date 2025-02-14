@@ -41,20 +41,20 @@ a {
   }
 }
 
-#image-form {
+#csv-form {
   display: flex;
   flex-direction: column;
   padding: 20px;
   max-width: 320px;
 }
 
-#image-form button {
+#csv-form button {
   display: flex;
   justify-content: center;
   margin-top: 16px;
   text-align: center;
 }
 
-#image-form button[type="submit"] {
+#csv-form button[type="submit"] {
   width: 88px;
 }
