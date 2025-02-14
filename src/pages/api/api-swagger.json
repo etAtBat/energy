@@ -1,0 +1,61 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "AWS centric energy app API",
+    "version" : "2025-02-14T19:27:04Z",
+    "title" : "energy-api"
+  },
+  "host" : "fsa9k97lw1.execute-api.us-west-2.amazonaws.com",
+  "basePath" : "/testing",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/alerts" : {
+      "post" : {
+        "operationId" : "UpdateThreshold",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "energy-authorizer" : [ "email" ]
+        } ]
+      }
+    },
+    "/energy/input" : {
+      "post" : {
+        "operationId" : "UpdateEnergyInput",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "energy-authorizer" : [ "email" ]
+        } ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "energy-authorizer" : {
+      "type" : "apiKey",
+      "name" : "Authorization",
+      "in" : "header",
+      "x-amazon-apigateway-authtype" : "cognito_user_pools"
+    }
+  },
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    }
+  }
+}
