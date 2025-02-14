@@ -23,7 +23,7 @@ export const ManualInput = () => {
   }
 
   return (
-    <form id="manual-energy-input" onSubmit={onSubmit}>
+    <form id="manual-energy-form" onSubmit={onSubmit}>
       <div>
         <label htmlFor="value">Usage (kWh):</label>
         <input

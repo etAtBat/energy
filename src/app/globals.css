@@ -61,18 +61,18 @@ a {
   width: 88px;
 }
 
-form#manual-energy-input {
+form#manual-energy-form {
   max-width: 320px;
 }
 
-form#manual-energy-input > * {
+form#manual-energy-form > * {
   margin-top: 16px;
 }
 
-#manual-energy-input label {
+#manual-energy-form label {
   margin-right: 6px;
 }
 
-#manual-energy-input button {
+#manual-energy-form button {
   width: 88px;
 }
