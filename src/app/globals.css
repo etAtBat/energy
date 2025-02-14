@@ -60,3 +60,19 @@ a {
 #csv-form button[type="submit"] {
   width: 88px;
 }
+
+form#manual-energy-input {
+  max-width: 320px;
+}
+
+form#manual-energy-input > * {
+  margin-top: 16px;
+}
+
+#manual-energy-input label {
+  margin-right: 6px;
+}
+
+#manual-energy-input button {
+  width: 88px;
+}

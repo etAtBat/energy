@@ -24,35 +24,37 @@ export const ManualInput = () => {
 
   return (
     <form id="manual-energy-input" onSubmit={onSubmit}>
-      <label htmlFor="start">Usage (kWh):</label>
-      <input
-        id="value"
-        type="number"
-        value={usageValue}
-        onChange={(event) => {
-          const selectedKWH = event?.target?.value;
-          if (selectedKWH) {
-            updateUsageValue(selectedKWH);
-          }
-        }}
-        >
-        </input>
-
+      <div>
+        <label htmlFor="value">Usage (kWh):</label>
+        <input
+          id="value"
+          type="number"
+          value={usageValue}
+          onChange={(event) => {
+            const selectedKWH = event?.target?.value;
+            if (selectedKWH) {
+              updateUsageValue(selectedKWH);
+            }
+          }}
+          />
+      </div>
+      <div>
       <label htmlFor="start">Start date:</label>
-      <input
-        type="date"
-        id="start"
-        name="trip-start"
-        value={datepickerValue}
-        min="2024-01-01"
-        max="2026-12-31"
-        onChange={(event) => {
-          const selectedDate = event?.target?.value;
-          if (selectedDate) {
-            updateDatepickerValue(selectedDate);
-          }
-        }}
-      />
+        <input
+          type="date"
+          id="start"
+          name="trip-start"
+          value={datepickerValue}
+          min="2024-01-01"
+          max="2026-12-31"
+          onChange={(event) => {
+            const selectedDate = event?.target?.value;
+            if (selectedDate) {
+              updateDatepickerValue(selectedDate);
+            }
+          }}
+        />
+      </div>
       <button type="submit">Submit</button>
     </form>
   );
