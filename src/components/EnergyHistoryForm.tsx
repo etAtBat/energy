@@ -76,8 +76,8 @@ export const EnergyHistoryForm = () => {
                 <tr>
                   <th>User ID</th>
                   <th>Date</th>
-                  <th>Usage</th>
-                  <th>Threshold</th>
+                  <th>Usage (kWh)</th>
+                  <th>Threshold (kWh)</th>
                 </tr>
               </thead>
               <tbody>

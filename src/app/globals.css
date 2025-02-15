@@ -90,6 +90,10 @@ button#sign-out {
   margin-top: 12px;
 }
 
+table#historical-table {
+  margin-top: 20px;
+}
+
 table#historical-table td {
   padding: 0 18px;
 }
