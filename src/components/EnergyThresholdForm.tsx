@@ -1,7 +1,9 @@
 "use client"
 import React, { FormEvent, useState } from "react";
+import { useAuth } from "react-oidc-context";
 
 export const EnergyThresholdForm = () => {
+  const auth = useAuth();
   const [datepickerValue, updateDatepickerValue] = useState('');
   const [thresholdValue, updateThresholdValue] = useState('');
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -12,11 +14,14 @@ export const EnergyThresholdForm = () => {
         body: JSON.stringify({
           date: datepickerValue,
           threshold: thresholdValue,
+          accessToken: auth.user?.access_token,
+          userId: auth?.user?.profile?.sub
         }),
         headers: {
           "Content-Type": "application/json",
         }
       });
+      alert("Success");
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +44,7 @@ export const EnergyThresholdForm = () => {
           />
       </div>
       <div>
-      <label htmlFor="start">Start date:</label>
+      <label htmlFor="start">Update threshold date</label>
         <input
           type="date"
           id="start"
