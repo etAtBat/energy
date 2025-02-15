@@ -29,7 +29,6 @@ export const EnergyManualInput = () => {
 
   return (
     <form id="manual-energy-form" onSubmit={onSubmit}>
-      start form
       <div>
         <label htmlFor="value">Usage (kWh):</label>
         <input
@@ -62,7 +61,6 @@ export const EnergyManualInput = () => {
         />
       </div>
       <button type="submit">Submit</button>
-      end form
     </form>
   );
 }
