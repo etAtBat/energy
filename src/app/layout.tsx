@@ -35,8 +35,14 @@ export default function RootLayout({
           <CognitoLogin />
           <section>
             <EnergyCSVForm />
+          </section>
+          <section>
             <EnergyManualInput />
+          </section>
+          <section>
             <EnergyThresholdForm />
+          </section>
+          <section>
             <EnergyHistoryForm />
           </section>
           {children}
