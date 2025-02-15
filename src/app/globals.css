@@ -80,8 +80,14 @@ form#manual-history-form {
 
 form#manual-energy-form button,
 form#manual-threshold-form button,
-form#manual-history-form button {
+form#manual-history-form button,
+button#sign-out,
+button#sign-in {
   width: 88px;
+}
+
+button#sign-out {
+  margin-top: 12px;
 }
 
 table#historical-table td {
