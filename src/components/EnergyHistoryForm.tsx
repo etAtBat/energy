@@ -6,6 +6,7 @@ export const EnergyHistoryForm = () => {
   const auth = useAuth();
   const [datepickerStartValue, updateDatepickerStartValue] = useState('');
   const [datepickerEndValue, updateDatepickerEndValue] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [userHistoricalItems, updateUserHistoricalItems] = useState([]) as Array<any>;
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,14 +21,10 @@ export const EnergyHistoryForm = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      // console.log('Data fetched:', data);
       const userItems = data?.items?.data;
-      console.log('userItems');
-      console.log(userItems);
       if (Array.isArray(userItems)) {
         updateUserHistoricalItems(userItems);
       }
-      // return data;
     } catch (error) {
       console.error(error);
     }
@@ -84,6 +81,7 @@ export const EnergyHistoryForm = () => {
               </thead>
               <tbody>
                 {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   userHistoricalItems.map((item: any) => {
                     const {
                       threshold,
