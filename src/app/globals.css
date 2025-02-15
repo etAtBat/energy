@@ -84,3 +84,10 @@ form#manual-history-form button {
   width: 88px;
 }
 
+table#historical-table td {
+  padding: 0 18px;
+}
+
+table#historical-table td:first-child {
+  padding-left: 0;
+}
