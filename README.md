@@ -32,6 +32,7 @@ Dockerize the app, then send the resulting image to ECR where it can be deployed
 - SNS alerts if a daily threshold is breached
 - CSV upload to s3 -> insert into DynamoDB
 - Validation / fail case handling
+- Testing
 - Break out forms into their own pages
 - Addressing TypeScript errors that have been thus far ignored
 
