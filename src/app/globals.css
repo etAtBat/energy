@@ -91,3 +91,7 @@ table#historical-table td {
 table#historical-table td:first-child {
   padding-left: 0;
 }
+
+h3.title {
+  margin-top: 32px;
+}

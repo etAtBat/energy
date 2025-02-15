@@ -36,15 +36,18 @@ export const EnergyCSVForm = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
   return (
-    <form id="csv-form" onSubmit={(e) => {
-      e.preventDefault();
-      const file = ref.current?.files?.[0];
-      if (file) {
-        uploadTos3(file);
-      }
-    }}>
-      <input id="csv-input" type="file" accept=".csv" ref={ref}></input>
-      <button type="submit">Upload</button>
-    </form>
+    <>
+      <h3 className="title">Upload energy CSV</h3>
+      <form id="csv-form" onSubmit={(e) => {
+        e.preventDefault();
+        const file = ref.current?.files?.[0];
+        if (file) {
+          uploadTos3(file);
+        }
+      }}>
+        <input id="csv-input" type="file" accept=".csv" ref={ref}></input>
+        <button type="submit">Upload</button>
+      </form>
+    </>
   );
 };

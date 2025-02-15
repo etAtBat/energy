@@ -32,6 +32,7 @@ export const EnergyHistoryForm = () => {
 
   return (
     <>
+      <h3 className="title">Retreive energy data by date</h3>
       <form id="manual-history-form" onSubmit={onSubmit}>
         <div>
           <label htmlFor="start">Retreive energy usage start date</label>
