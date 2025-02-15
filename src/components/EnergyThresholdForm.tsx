@@ -48,7 +48,6 @@ export const EnergyThresholdForm = () => {
         <input
           type="date"
           id="start"
-          name="trip-start"
           value={datepickerValue}
           min="2024-01-01"
           max="2026-12-31"
