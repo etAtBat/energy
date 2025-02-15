@@ -36,6 +36,10 @@ Dockerize the app, then send the resulting image to ECR where it can be deployed
 - Break out forms into their own pages
 - Addressing TypeScript errors that have been thus far ignored
 
+## Secrets
+A `.env` file is used to handle secrets. A stubbed out `dotenv` file is provided in the repo. Please copy the values into a `.env` of your own (it's `.gitignore`'d).
+Variables that are used on the client can be seen in dotenv. Contact project maintainers for corresponding secret values.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
