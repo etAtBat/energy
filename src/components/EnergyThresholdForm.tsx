@@ -46,7 +46,7 @@ export const EnergyThresholdForm = () => {
             />
         </div>
         <div>
-        <label htmlFor="start">Update threshold date</label>
+        <label htmlFor="start">Update threshold date: </label>
           <input
             type="date"
             id="threshold-value"

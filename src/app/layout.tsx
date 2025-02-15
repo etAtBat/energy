@@ -33,8 +33,8 @@ export default function RootLayout({
       <CognitoWrapper>
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
           <CognitoLogin />
-          <section>
-            <EnergyCSVForm />
+          <section className="disclaimer">
+            Sign in required for submitting forms below
           </section>
           <section>
             <EnergyManualInput />
@@ -44,6 +44,9 @@ export default function RootLayout({
           </section>
           <section>
             <EnergyHistoryForm />
+          </section>
+          <section>
+            <EnergyCSVForm />
           </section>
           {children}
         </body>
