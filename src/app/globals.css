@@ -67,16 +67,20 @@ form#manual-threshold-form {
 }
 
 form#manual-energy-form > *,
-form#manual-threshold-form > * {
+form#manual-threshold-form > *,
+form#manual-history-form > * {
   margin-top: 16px;
 }
 
-#manual-energy-form label,
-#manual-threshold-form label {
+form#manual-energy-form label,
+form#manual-threshold-form label,
+form#manual-history-form {
   margin-right: 6px;
 }
 
-#manual-energy-form button,
-#manual-threshold-form button {
+form#manual-energy-form button,
+form#manual-threshold-form button,
+form#manual-history-form button {
   width: 88px;
 }
+

@@ -47,7 +47,7 @@ export const EnergyThresholdForm = () => {
       <label htmlFor="start">Update threshold date</label>
         <input
           type="date"
-          id="start"
+          id="threshold-value"
           value={datepickerValue}
           min="2024-01-01"
           max="2026-12-31"

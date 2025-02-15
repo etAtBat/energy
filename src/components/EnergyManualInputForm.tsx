@@ -47,7 +47,7 @@ export const EnergyManualInput = () => {
       <label htmlFor="start">Usage date:</label>
         <input
           type="date"
-          id="start"
+          id="usage-date"
           value={datepickerValue}
           min="2024-01-01"
           max="2026-12-31"

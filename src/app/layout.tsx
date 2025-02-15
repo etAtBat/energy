@@ -5,6 +5,7 @@ import { CognitoLogin } from "@/components/CognitoLogin";
 import { EnergyCSVForm } from '@/components/EnergyCSVForm';
 import { EnergyManualInput } from '@/components/EnergyManualInputForm';
 import { EnergyThresholdForm } from '@/components/EnergyThresholdForm'
+import { EnergyHistoryForm } from '@/components/EnergyHistoryForm';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -36,6 +37,7 @@ export default function RootLayout({
             <EnergyCSVForm />
             <EnergyManualInput />
             <EnergyThresholdForm />
+            <EnergyHistoryForm />
           </section>
           {children}
         </body>
