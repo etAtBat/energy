@@ -29,7 +29,6 @@ export default async function handler(
       }) as any;
       const fetchResult = await result.json();
       const userEnergyItems = fetchResult?.data || [];
-      console.log(userEnergyItems);
       return res.status(200).json({ message: "Energy history fetched successfully", items: fetchResult });
     } catch (error) {
       console.error(error);

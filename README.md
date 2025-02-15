@@ -35,10 +35,14 @@ Dockerize the app, then send the resulting image to ECR where it can be deployed
 - Testing
 - Break out forms into their own pages
 - Addressing TypeScript errors that have been thus far ignored
+- Use Swagger docs as both a source for API Gateway and as a source for an API visualization documentation page
 
 ## Secrets
 A `.env` file is used to handle secrets. A stubbed out `dotenv` file is provided in the repo. Please copy the values into a `.env` of your own (it's `.gitignore`'d).
 Variables that are used on the client can be seen in dotenv. Contact project maintainers for corresponding secret values.
+
+## API
+API swagger file is located in `/pages/api` (`api-swagger.json`). This file can be exported from API Gateway and should be updated when API Gateway changes.
 
 ## Learn More
 

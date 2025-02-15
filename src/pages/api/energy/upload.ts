@@ -11,8 +11,6 @@ export default function handler(
   const { method } = req;
   if (method === 'POST') {
     const { input } = req.body;
-    console.log('input');
-    console.log(input);
     // Input: Pre-signed S3 URL for file upload (?)
 
     return res.status(200).json({ message: 'Hello from the energy upload POST!' });
