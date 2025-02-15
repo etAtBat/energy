@@ -44,11 +44,10 @@ export const EnergyManualInput = () => {
           />
       </div>
       <div>
-      <label htmlFor="start">Start date:</label>
+      <label htmlFor="start">Usage date:</label>
         <input
           type="date"
           id="start"
-          name="trip-start"
           value={datepickerValue}
           min="2024-01-01"
           max="2026-12-31"
