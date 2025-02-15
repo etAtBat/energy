@@ -1,17 +1,15 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "AWS centric energy app API",
-    "version" : "2025-02-14T19:27:04Z",
-    "title" : "energy-api"
+    "version" : "2025-02-15T18:27:22Z",
+    "title" : "energy-app-api"
   },
-  "host" : "fsa9k97lw1.execute-api.us-west-2.amazonaws.com",
-  "basePath" : "/testing",
+  "host" : "mni7slqhmd.execute-api.us-west-2.amazonaws.com",
+  "basePath" : "/staging",
   "schemes" : [ "https" ],
   "paths" : {
     "/alerts" : {
       "post" : {
-        "operationId" : "UpdateThreshold",
         "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
@@ -22,13 +20,28 @@
           }
         },
         "security" : [ {
-          "energy-authorizer" : [ "email" ]
+          "energy-app-authorizer" : [ "email" ]
+        } ]
+      }
+    },
+    "/energy/history" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "energy-app-authorizer" : [ "email" ]
         } ]
       }
     },
     "/energy/input" : {
       "post" : {
-        "operationId" : "UpdateEnergyInput",
         "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
@@ -39,13 +52,13 @@
           }
         },
         "security" : [ {
-          "energy-authorizer" : [ "email" ]
+          "energy-app-authorizer" : [ "email" ]
         } ]
       }
     }
   },
   "securityDefinitions" : {
-    "energy-authorizer" : {
+    "energy-app-authorizer" : {
       "type" : "apiKey",
       "name" : "Authorization",
       "in" : "header",
