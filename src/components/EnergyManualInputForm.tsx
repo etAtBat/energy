@@ -1,20 +1,28 @@
 "use client"
 import React, { FormEvent, useState } from "react";
+import { useAuth } from "react-oidc-context";
 
 export const EnergyManualInput = () => {
+  const auth = useAuth();
+  // console.log('auth?.user?.profile?.sub');
+  // console.log(auth?.user?.profile?.sub);
   const [datepickerValue, updateDatepickerValue] = useState('');
   const [usageValue, updateUsageValue] = useState('');
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('auth.user');
+    console.log(auth.user);
     try {
       await fetch('/api/energy/input', {
         method: "POST",
         body: JSON.stringify({
           date: datepickerValue,
           usage: usageValue,
+          accessToken: auth.user?.access_token,
+          userId: auth?.user?.profile?.sub
         }),
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         }
       });
     } catch (error) {
@@ -24,6 +32,7 @@ export const EnergyManualInput = () => {
 
   return (
     <form id="manual-energy-form" onSubmit={onSubmit}>
+      start form
       <div>
         <label htmlFor="value">Usage (kWh):</label>
         <input
@@ -56,6 +65,7 @@ export const EnergyManualInput = () => {
         />
       </div>
       <button type="submit">Submit</button>
+      end form
     </form>
   );
 }
