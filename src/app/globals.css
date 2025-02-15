@@ -67,16 +67,37 @@ form#manual-threshold-form {
 }
 
 form#manual-energy-form > *,
-form#manual-threshold-form > * {
+form#manual-threshold-form > *,
+form#manual-history-form > * {
   margin-top: 16px;
 }
 
-#manual-energy-form label,
-#manual-threshold-form label {
+form#manual-energy-form label,
+form#manual-threshold-form label,
+form#manual-history-form {
   margin-right: 6px;
 }
 
-#manual-energy-form button,
-#manual-threshold-form button {
+form#manual-energy-form button,
+form#manual-threshold-form button,
+form#manual-history-form button,
+button#sign-out,
+button#sign-in {
   width: 88px;
+}
+
+button#sign-out {
+  margin-top: 12px;
+}
+
+table#historical-table td {
+  padding: 0 18px;
+}
+
+table#historical-table td:first-child {
+  padding-left: 0;
+}
+
+body section {
+  margin-top: 32px;
 }
