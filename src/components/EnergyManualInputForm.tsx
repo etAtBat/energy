@@ -4,14 +4,10 @@ import { useAuth } from "react-oidc-context";
 
 export const EnergyManualInput = () => {
   const auth = useAuth();
-  // console.log('auth?.user?.profile?.sub');
-  // console.log(auth?.user?.profile?.sub);
   const [datepickerValue, updateDatepickerValue] = useState('');
   const [usageValue, updateUsageValue] = useState('');
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('auth.user');
-    console.log(auth.user);
     try {
       await fetch('/api/energy/input', {
         method: "POST",
@@ -25,6 +21,7 @@ export const EnergyManualInput = () => {
           "Content-Type": "application/json"
         }
       });
+      alert("Success");
     } catch (error) {
       console.error(error);
     }

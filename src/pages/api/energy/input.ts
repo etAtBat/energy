@@ -27,7 +27,7 @@ export default async function handler(
           "Authorization": accessToken
         },
       });
-      return res.status(200).json({ message: "Hello from energy input!" });
+      return res.status(200).json({ message: "Energy data saved successfully" });
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: "Something went wrong" });
