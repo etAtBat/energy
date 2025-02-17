@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+Node 18.
+There is a `.nvmrc` file in this repo. Running `nvm use` will read it and adjust your local Node version accordingly.
 
 First, run the development server:
 
@@ -36,6 +38,7 @@ Dockerize the app, then send the resulting image to ECR where it can be deployed
 - CSV upload to s3 -> insert into DynamoDB
 - Validation / fail case handling
 - Testing
+- Dockerizing
 - Break out forms into their own pages
 - Addressing TypeScript errors that have been thus far ignored
 - Use Swagger docs as both a source for API Gateway and as a source for an API visualization documentation page
