@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+Node 18.
+There is a `.nvmrc` file in this repo. Running `nvm use` will read it and adjust your local Node version accordingly.
 
 First, run the development server:
 
